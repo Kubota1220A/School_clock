@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移動教室時計</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>移動教室時計</h1>
+    <div class="clocks-container">
+        <!-- JST clock (配置を最初に移動) -->
+        <div class="clock-wrapper jst-clock-wrapper">
+            <h2>日本標準時</h2>
+            <div class="clock" id="clock5"></div>
+        </div>
+
+        <!-- Main clocks group -->
+        <div class="main-clocks">
+            <div class="clock-wrapper">
+                <h2>3411</h2>
+                <div class="clock" id="clock1"></div>
+            </div>
+            <div class="clock-wrapper">
+                <h2>電気電子工学実験室</h2>
+                <div class="clock" id="clock2"></div>
+            </div>
+            <div class="clock-wrapper">
+                <h2>工事中</h2>
+                <div class="clock" id="clock3"></div>
+            </div>
+            <div class="clock-wrapper">
+                <h2>工事中</h2>
+                <div class="clock" id="clock4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 拡大表示用オーバーレイ -->
+    <div id="clock-overlay" class="overlay-hidden">
+        <div class="overlay-content">
+            <h2 id="overlay-title">時計タイトル</h2>
+            <div id="overlay-clock" class="clock-large"></div>
+            <button id="overlay-close">戻る</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
