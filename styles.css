@@ -174,12 +174,19 @@ h1 {
 }
 
 /* JST時計の題名スタイル - 全画面表示と同じ色に統一 */
-.jst-clock-wrapper h2,
-#overlay-title.jst {
+.jst-clock-wrapper h2 {
     color: #0056b3;
     font-size: 1.8em; /* タイトルサイズを大きく */
     text-align: center; /* 中央揃え */
     width: 100%; /* 幅いっぱいに */
+}
+
+/* JST時計のオーバーレイ題名スタイル - テキスト中央揃えを削除 */
+#overlay-title.jst {
+    color: #0056b3;
+    font-size: 1.8em; /* タイトルサイズを大きく */
+    /* text-align: centerを削除 */
+    /* width: 100%を削除 - title-barの子要素としてのスタイルを継承 */
 }
 
 /* 戻るボタンのスタイル - オーバーレイ用のみ */
@@ -198,7 +205,48 @@ h1 {
     background-color: #333;
 }
 
-/* メディアクエリの追加 - スマートフォン対応 */
+/* PC表示用の大きな拡大表示（デスクトップ表示） */
+@media screen and (min-width: 769px) {
+    .overlay-content {
+        width: 95%;
+        max-width: 1200px; /* より広い最大幅 */
+        padding: 30px;
+    }
+    
+    #overlay-title {
+        font-size: 4em; /* タイトルを大きく */
+    }
+    
+    #overlay-clock {
+        font-size: 10em; /* 時計を非常に大きく */
+        padding: 40px;
+        width: 95%;
+        max-width: 95%;
+        min-height: 300px; /* 最小高さを保証 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* タブレットサイズ用 */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .overlay-content {
+        width: 90%;
+        max-width: 900px;
+    }
+    
+    #overlay-title {
+        font-size: 3.5em;
+    }
+    
+    #overlay-clock {
+        font-size: 8em;
+        padding: 30px;
+    }
+}
+
+/* スマートフォン対応はそのまま維持 */
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5em;
