@@ -4,11 +4,14 @@ body {
     align-items: center;
     font-family: sans-serif;
     background-color: #f0f0f0;
-    transition: background-color 0.3s ease; /* 背景色の変化をスムーズに */
-    margin: 0; /* マージンを削除 */
-    padding: 10px; /* 少しだけパディングを追加 */
-    box-sizing: border-box; /* サイズ計算にパディングを含める */
-    min-height: 100vh; /* 最小高さを設定 */
+    transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* 横方向のスクロールを防止 */
 }
 
 /* 時計拡大時に他の要素を隠す */
@@ -62,20 +65,22 @@ h1 {
 
 .clock {
     border: 2px solid #333;
-    padding: 10px 20px; /* パディングを縮小 */
+    padding: 10px;
     border-radius: 10px;
     background-color: #fff;
-    font-size: 2.3em; /* フォントサイズを調整 */
-    min-height: 60px; /* 最小高さを設定 */
-    width: 100%; /* 幅を100%に変更して画面いっぱいに */
-    min-width: 100%; /* 最小幅も100%に変更 */
-    max-width: none; /* 最大幅の制限を削除 */
-    display: flex; /* フレックス表示を追加 */
-    align-items: center; /* 縦方向中央揃え */
-    justify-content: center; /* 横方向中央揃え */
+    font-size: 2em; /* フォントサイズを少し小さく調整 */
+    min-height: 50px; /* 最小高さを調整 */
+    width: 100%;
+    max-width: 100%; /* 最大幅を100%に制限 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    box-sizing: border-box; /* paddingを幅に含める */
-    transition: font-size 0.3s ease, padding 0.3s ease, min-width 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    text-align: center; /* テキストを中央揃え */
+    word-break: break-word; /* 必要に応じて単語を折り返す */
+    overflow: hidden; /* はみ出しを防止 */
 }
 
 /* 拡大表示用オーバーレイ */
@@ -111,16 +116,30 @@ h1 {
     max-width: 800px;
 }
 
+/* 題名バーのスタイル - 題名とボタンを横並びに */
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
 #overlay-title {
     font-size: 3em;
-    margin-bottom: 30px;
     color: #333;
+    margin: 0; /* マージンをリセット */
+    flex-grow: 1; /* 利用可能なスペースを取る */
+    padding-right: 10px; /* ボタンとの間隔 */
 }
 
 #overlay-clock {
-    font-size: 9em;
-    padding: 40px;
-    min-width: 70vw;
+    font-size: 6em;
+    padding: 20px;
+    min-width: auto;
+    width: 90%;
+    max-width: 90%;
     text-align: center;
     background-color: #fff;
     border: 4px solid #333;
@@ -165,9 +184,6 @@ h1 {
 
 /* 戻るボタンのスタイル - オーバーレイ用のみ */
 #overlay-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     padding: 12px 24px;
     font-size: 1.5em;
     background-color: #555;
@@ -175,8 +191,71 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 10px; /* 題名との間隔 */
 }
 
 #overlay-close:hover {
     background-color: #333;
+}
+
+/* メディアクエリの追加 - スマートフォン対応 */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .clock-wrapper h2 {
+        font-size: 1.2em;
+    }
+    
+    .clock {
+        font-size: 1.8em;
+        padding: 8px;
+        min-height: 40px;
+    }
+    
+    #clock5 {
+        font-size: 2.2em;
+        min-height: 60px;
+    }
+    
+    .jst-clock-wrapper h2 {
+        font-size: 1.5em;
+    }
+    
+    .title-bar {
+        margin-bottom: 15px;
+    }
+    
+    #overlay-title {
+        font-size: 1.8em;
+    }
+    
+    #overlay-close {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+    
+    #overlay-clock {
+        font-size: 4em;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* さらに小さい画面用の調整 */
+@media screen and (max-width: 320px) {
+    .clock {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    
+    #clock5 {
+        font-size: 1.8em;
+    }
+    
+    #overlay-clock {
+        font-size: 3em;
+        padding: 10px;
+    }
 }
