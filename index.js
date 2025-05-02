@@ -102,7 +102,7 @@ function startClocks() {
             
             // 時計を更新
             updateClock(clock.id, clock.offset);
-            setInterval(() => updateClock(clock.id, clock.offset), 1000);
+            setInterval(() => updateClock(clock.id, clock.offset), 500);
         }
     });
 }
