@@ -86,9 +86,9 @@ function startClocks() {
     
     // 各時計の設定
     const clocks = [
-        { id: 'clock1', offset: 0.5 },
-        { id: 'clock2', offset: -2000 }, // 自学自習室の時計を2秒遅らせる
-        { id: 'clock3', offset: 0 }, // 2分進める
+        { id: 'clock1', offset: 0.5 * 1000 },
+        { id: 'clock2', offset: -2 * 1000 }, // 自学自習室の時計を2秒遅らせる
+        { id: 'clock3', offset: 60 * 1000 }, // 2分進める
         { id: 'clock4', offset: 57 * 1000 }, // 電気電子工学実験室を57秒進める
         { id: 'clock5', offset: jstOffsetFromLocal }
     ];
