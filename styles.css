@@ -208,24 +208,45 @@ h1 {
 /* PC表示用の大きな拡大表示（デスクトップ表示） */
 @media screen and (min-width: 769px) {
     .overlay-content {
-        width: 95%;
-        max-width: 1200px; /* より広い最大幅 */
-        padding: 30px;
+        width: 85%;
+        max-width: 1000px; /* FHDで収まるよう最大幅を調整 */
+        padding: 20px;
     }
     
     #overlay-title {
-        font-size: 4em; /* タイトルを大きく */
+        font-size: 3.5em; /* FHDに合わせて調整 */
     }
     
     #overlay-clock {
-        font-size: 10em; /* 時計を非常に大きく */
-        padding: 40px;
-        width: 95%;
-        max-width: 95%;
-        min-height: 300px; /* 最小高さを保証 */
-        display: flex;
+        font-size: 8em; /* FHDに合わせて調整 */
+        padding: 30px;
+        width: 90%;
+        max-width: 90%;
+        min-height: 240px; /* 最小高さを調整 */
+    }
+}
+
+/* FHD（1920x1080）専用の調整 */
+@media screen and (min-width: 1920px) {
+    .main-clocks {
+        flex-direction: row; /* 横方向に配置 */
+        flex-wrap: wrap; /* 必要に応じて折り返し */
         justify-content: center;
-        align-items: center;
+        max-width: 1800px; /* 最大幅を設定 */
+    }
+    
+    .clock-wrapper {
+        width: 30%; /* 3つ並べられるようにする */
+        margin: 0 1.5%;
+    }
+    
+    .jst-clock-wrapper {
+        width: 50%; /* JSTクロックは幅を50%に */
+        margin-bottom: 20px;
+    }
+    
+    #clock5 {
+        width: 90%; /* JSTクロックの幅を調整 */
     }
 }
 

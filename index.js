@@ -86,11 +86,13 @@ function startClocks() {
     
     // 各時計の設定
     const clocks = [
-        { id: 'clock1', offset: 0.5 * 1000 },
-        { id: 'clock2', offset: -2 * 1000 }, // 自学自習室の時計を2秒遅らせる
-        { id: 'clock3', offset: 0 * 1000 }, // 2分進める
-        { id: 'clock4', offset: 57 * 1000 }, // 電気電子工学実験室を57秒進める
-        { id: 'clock5', offset: jstOffsetFromLocal }
+        { id: 'clock1', offset: 0.5 * 1000 },  // 3411 特別教室
+        { id: 'clock2', offset: -2 * 1000 },   // 4105 自学自習室
+        { id: 'clock3', offset: 0 * 1000 },    // 2401 2DHR
+        { id: 'clock4', offset: 57 * 1000 },   // 電気電子工学実験室
+        { id: 'clock5', offset: jstOffsetFromLocal }, // 日本標準時
+        { id: 'clock6', offset: 0 * 1000 },    // 工事中
+        { id: 'clock7', offset: 0 * 1000 }    // 工事中
     ];
     
     // 各時計を初期化
