@@ -93,7 +93,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(26, 42, 60, 0.98); /* もっとダークな背景で目に超優しいヨ！親切でしょ？👍 */
+    background-color: rgba(26, 42, 60, 0.98); /* もっとダークな背景で目に超優しくしたヨ！親切でしょ？👍 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,3 +331,293 @@ h1 {
         padding: 10px;
     }
 }
+
+/* ライトモード用スタイル */
+body.light-mode {
+    background-color: #f3f6fa !important;
+    color: #222 !important;
+}
+body.light-mode .clock {
+    background-color: #fff !important;
+    color: #222 !important;
+    border-color: #b0c4d6 !important;
+}
+body.light-mode .clock-wrapper h2 {
+    color: #3a4a5a !important;
+}
+body.light-mode #clock-overlay {
+    background-color: rgba(243, 246, 250, 0.98) !important;
+}
+body.light-mode #overlay-title {
+    color: #3a4a5a !important;
+}
+body.light-mode #overlay-clock {
+    background-color: #fff !important;
+    color: #222 !important;
+    border-color: #b0c4d6 !important;
+}
+body.light-mode #clock5, body.light-mode #overlay-clock.jst {
+    background-color: #e6f2ff !important;
+    color: #225577 !important;
+    border-color: #7ab0de !important;
+}
+body.light-mode .jst-clock-wrapper h2, body.light-mode #overlay-title.jst {
+    color: #225577 !important;
+}
+body.light-mode #overlay-close {
+    background-color: #b0c4d6 !important;
+    color: #222 !important;
+}
+body.light-mode #overlay-close:hover {
+    background-color: #d0e0ee !important;
+}
+
+/* ダークモード用スタイル */
+body.dark-mode {
+    background-color: #1a2a3c !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .clock {
+    background-color: #3a4a5a !important;
+    color: #e0e0e0 !important;
+    border-color: #4d6277 !important;
+}
+body.dark-mode .clock-wrapper h2 {
+    color: #b8c5d6 !important;
+}
+body.dark-mode #clock-overlay {
+    background-color: rgba(26, 42, 60, 0.98) !important;
+}
+body.dark-mode #overlay-title {
+    color: #b8c5d6 !important;
+}
+body.dark-mode #overlay-clock {
+    background-color: #3a4a5a !important;
+    color: #e0e0e0 !important;
+    border-color: #4d6277 !important;
+}
+body.dark-mode #clock5, body.dark-mode #overlay-clock.jst {
+    background-color: #2c4258 !important;
+    color: #b8e0ff !important;
+    border-color: #4d89c7 !important;
+}
+body.dark-mode .jst-clock-wrapper h2, body.dark-mode #overlay-title.jst {
+    color: #7ab0de !important;
+}
+body.dark-mode #overlay-close {
+    background-color: #4d6277 !important;
+    color: #fff !important;
+}
+body.dark-mode #overlay-close:hover {
+    background-color: #5d7387 !important;
+}
+
+/* ====== 裏モード！おじさんセンス全開だヨ！！😁✨ ====== */
+/* 通常モードはそのままで、ura-modeクラスが付いたときだけ派手になるヨ！ */
+body.ura-mode {
+  background: repeating-linear-gradient(135deg, #ff69b4, #ffe600 40px, #00e6ff 80px, #ff69b4 120px);
+  color: #fff700;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+  animation: urabg 2s linear infinite;
+}
+@keyframes urabg {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+body.ura-mode .clock, 
+body.ura-mode #overlay-clock, 
+body.ura-mode #clock5, 
+body.ura-mode #overlay-clock.jst {
+  background: linear-gradient(90deg, #ffe600 0%, #ff69b4 100%);
+  color: #ff0080;
+  border: 4px dashed #fff700;
+  text-shadow: 2px 2px 8px #ff69b4, 0 0 10px #ffe600;
+  animation: uraclock 1s infinite alternate;
+}
+@keyframes uraclock {
+  0% { box-shadow: 0 0 10px #ff69b4; }
+  100% { box-shadow: 0 0 40px #ffe600; }
+}
+body.ura-mode .clock-wrapper h2, 
+body.ura-mode .jst-clock-wrapper h2, 
+body.ura-mode #overlay-title, 
+body.ura-mode #overlay-title.jst {
+  color: #fff700 !important;
+  text-shadow: 2px 2px 8px #ff69b4, 0 0 10px #ffe600;
+  font-size: 2em;
+  letter-spacing: 2px;
+  animation: uratitle 1.2s infinite alternate;
+}
+@keyframes uratitle {
+  0% { transform: scale(1) rotate(-2deg); }
+  100% { transform: scale(1.08) rotate(2deg); }
+}
+body.ura-mode #overlay-close {
+  background: linear-gradient(90deg, #ff69b4 0%, #ffe600 100%);
+  color: #fff700;
+  border: 2px solid #ff0080;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #ff69b4;
+  animation: urabtn 0.8s infinite alternate;
+}
+@keyframes urabtn {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.3); }
+}
+.ura-banner {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-6deg);
+  background: #ff69b4;
+  color: #fff700;
+  font-size: 2.2em;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  padding: 16px 40px;
+  border: 4px double #ffe600;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff69b4, 0 0 10px #ffe600;
+  z-index: 9999;
+  text-shadow: 2px 2px 8px #ffe600, 0 0 10px #ff69b4;
+  animation: urabanner 1.2s infinite alternate;
+  pointer-events: none;
+}
+@keyframes urabanner {
+  0% { transform: translateX(-50%) rotate(-6deg) scale(1); }
+  100% { transform: translateX(-50%) rotate(6deg) scale(1.08); }
+}
+/* ====== ここまで裏モード！おじさんの本気だヨ！！ ====== */
+
+/* ====== おじさん応援メッセージ！たくさんかっこいいでしょ？😎✨ ====== */
+.ojisan-messages-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.ojisan-message {
+  position: absolute;
+  background: linear-gradient(90deg, #ff69b4, #ff9e1f);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+  max-width: 80%;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* 右からアニメーション */
+.ojisan-message.from-right {
+  right: -500px;
+  animation: ojisan-message-from-right 5s forwards;
+}
+
+@keyframes ojisan-message-from-right {
+  0% {
+    right: -500px;
+    opacity: 0;
+  }
+  15% {
+    right: 20px;
+    opacity: 1;
+  }
+  85% {
+    right: 20px;
+    opacity: 1;
+  }
+  100% {
+    right: -500px;
+    opacity: 0;
+  }
+}
+
+/* 左からアニメーション */
+.ojisan-message.from-left {
+  left: -500px;
+  animation: ojisan-message-from-left 5s forwards;
+}
+
+@keyframes ojisan-message-from-left {
+  0% {
+    left: -500px;
+    opacity: 0;
+  }
+  15% {
+    left: 20px;
+    opacity: 1;
+  }
+  85% {
+    left: 20px;
+    opacity: 1;
+  }
+  100% {
+    left: -500px;
+    opacity: 0;
+  }
+}
+
+/* 上からアニメーション */
+.ojisan-message.from-top {
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ojisan-message-from-top 5s forwards;
+}
+
+@keyframes ojisan-message-from-top {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  15% {
+    top: 20px;
+    opacity: 1;
+  }
+  85% {
+    top: 20px;
+    opacity: 1;
+  }
+  100% {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+/* ====== スマホ用タップフィードバック！おじさんモバイル対応だヨ！📱✨ ====== */
+.tap-feedback {
+  position: absolute;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  color: #ff69b4;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px white;
+  pointer-events: none;
+  animation: tap-animation 0.8s forwards;
+  z-index: 9999;
+  transition: all 0.2s ease;
+}
+
+@keyframes tap-animation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/* ====== ここまでおじさんメッセージ！かわいいでしょ？💕 ====== */
