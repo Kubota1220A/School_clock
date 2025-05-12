@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
-    background-color: #2a3b4c; /* ダークブルーで目に優しくしてあげたヨ〜😊 */
+    background-color: #1a2a3c; /* もっと暗いダークブルーで目に超優しくしたヨ〜😊 */
     color: #e0e0e0; /* 明るい文字で見やすくなるネ！バッチリだヨ💕 */
     transition: background-color 0.3s ease;
     margin: 0;
@@ -93,7 +93,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(42, 59, 76, 0.98); /* ダークな背景で目に優しいヨ！親切でしょ？👍 */
+    background-color: rgba(26, 42, 60, 0.98); /* もっとダークな背景で目に超優しいヨ！親切でしょ？👍 */
     display: flex;
     justify-content: center;
     align-items: center;
