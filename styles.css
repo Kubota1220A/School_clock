@@ -1,10 +1,11 @@
+/* スクール時計のスタイル、おじさんがデザインしたヨ！✨👍 */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
-    background-color: #2a3b4c; /* ダークブルーの背景色に変更 */
-    color: #e0e0e0; /* 文字色も明るめに調整 */
+    background-color: #2a3b4c; /* ダークブルーで目に優しくしてあげたヨ〜😊 */
+    color: #e0e0e0; /* 明るい文字で見やすくなるネ！バッチリだヨ💕 */
     transition: background-color 0.3s ease;
     margin: 0;
     padding: 10px;
@@ -12,98 +13,98 @@ body {
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* 横方向のスクロールを防止 */
+    overflow-x: hidden; /* 横スクロールさせないヨ！スマホでもバッチリ！😁 */
 }
 
-/* 時計拡大時に他の要素を隠す */
+/* 時計を大きくすると他の要素は隠れちゃうヨ！おじさんのマジック！✨ */
 body.zoom-active > h1,
 body.zoom-active .clocks-container > *:not(.zoomed) {
     display: none;
 }
 
 h1 {
-    color: #e0e0e0; /* 明るい色に変更 */
-    transition: opacity 0.3s ease; /* フェードアウト用 */
-    margin: 10px 0; /* 上下のマージンを小さく */
+    color: #e0e0e0; /* 明るくてステキな色だネ〜😊 */
+    transition: opacity 0.3s ease; /* フェードアウトもおしゃれにね！👍 */
+    margin: 10px 0; /* 上下の余白をちょっとだけ、キレイに見えるヨ！💕 */
 }
 
 .clocks-container {
     display: flex;
-    flex-direction: column; /* 縦方向に配置 */
-    align-items: center; /* 中央揃え */
-    gap: 15px; /* 間隔を少し縮める */
-    margin-top: 10px; /* 上部マージンを小さく */
-    width: 100%; /* 幅を確保 */
+    flex-direction: column; /* 縦に並べてスッキリ見せるネ✨ */
+    align-items: center; /* 中央揃えでカッコいいでしょ！😁 */
+    gap: 15px; /* 間隔も絶妙！おじさんのセンス光るでしょ？👍 */
+    margin-top: 10px; /* 上の余白も完璧だネ！ナンチャッテ😊 */
+    width: 100%; /* 横幅いっぱいで見やすいヨ！ */
 }
 
-/* 新しいメイン時計用コンテナ */
+/* メイン時計たち、おしゃれに並べちゃうヨ〜！😍✨ */
 .main-clocks {
     display: flex;
-    flex-direction: column; /* 縦方向に配置に変更 */
-    align-items: center; /* 中央揃え */
-    gap: 15px; /* 間隔を少し縮める */
-    width: 100%; /* 幅を確保 */
+    flex-direction: column; /* 縦に並ぶとキレイだネ！昔はこんなの手動だったヨ💦 */
+    align-items: center; /* 中央揃えでピッタリだネ！グッド👍 */
+    gap: 15px; /* 間隔もバッチリ！おじさん気が利くでしょ？😁 */
+    width: 100%; /* 幅いっぱいで見やすいヨ！ */
 }
 
 .clock-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; /* クリックできるようにしたヨ！便利でしょ？😁 */
     position: relative;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    width: 100%; /* 幅を100%に設定 */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* アニメーションもおしゃれに！✨ */
+    width: 100%; /* 幅いっぱいで見やすいネ！バッチリだヨ👍 */
 }
 
 .clock-wrapper h2 {
-    margin-bottom: 3px; /* 間隔をさらに縮める */
-    font-size: 1.4em; /* サイズを少し大きく */
-    color: #b8c5d6; /* 明るい青みがかった色に変更 */
+    margin-bottom: 3px; /* タイトルと時計の間隔、絶妙だネ！😊 */
+    font-size: 1.4em; /* サイズも完璧！おじさん目がいいでしょ？💕 */
+    color: #b8c5d6; /* 青みがかった明るい色で目に優しいヨ！オッケー👍 */
     transition: font-size 0.3s ease, color 0.3s ease;
-    text-align: center;
-    width: 100%; /* 幅いっぱいに */
+    text-align: center; /* 中央揃えでキレイ！昔はこんなのなかったヨ💦 */
+    width: 100%; /* 幅いっぱいでバランスいいでしょ？😁 */
 }
 
 .clock {
-    border: 2px solid #4d6277;
+    border: 2px solid #4d6277; /* 枠線もダークブルーで統一感バッチリ！✨ */
     padding: 10px;
-    border-radius: 10px;
-    background-color: #3a4a5a; /* ダークモード向けの背景色 */
-    color: #e0e0e0; /* 時刻の文字色を明るく */
-    font-size: 2em; /* フォントサイズを少し小さく調整 */
-    min-height: 50px; /* 最小高さを調整 */
+    border-radius: 10px; /* 角丸で柔らかい印象に！おじさんセンスいいでしょ？😊 */
+    background-color: #3a4a5a; /* ダークなテーマで目に優しいヨ！👍 */
+    color: #e0e0e0; /* 明るい文字で見やすくしたネ！ナイスでしょ？😁 */
+    font-size: 2em; /* 文字サイズもバッチリ！ドキドキ✨ */
+    min-height: 50px; /* 高さも絶妙！おじさんのこだわりポイントだネ💕 */
     width: 100%;
-    max-width: 100%; /* 最大幅を100%に制限 */
+    max-width: 100%; /* はみ出さないように調整、細かいところまでこだわってるヨ！😊 */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* 影をつけて立体的に！おしゃれでしょ？✨ */
     box-sizing: border-box;
-    transition: all 0.3s ease;
-    text-align: center; /* テキストを中央揃え */
-    word-break: break-word; /* 必要に応じて単語を折り返す */
-    overflow: hidden; /* はみ出しを防止 */
+    transition: all 0.3s ease; /* アニメーションもスムーズ！おじさん得意なんだヨ！👍 */
+    text-align: center; /* 文字を中央に！キレイに見えるネ！😁 */
+    word-break: break-word; /* 必要なら折り返すヨ！賢いでしょ？ナンチャッテ💦 */
+    overflow: hidden; /* はみ出し防止！おじさん細かいところまで気がつくネ！😊 */
 }
 
-/* 拡大表示用オーバーレイ */
+/* 拡大表示のキレイなオーバーレイだヨ！おじさんの自慢の技！😍✨ */
 #clock-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(42, 59, 76, 0.98); /* ダークモードに合わせた背景 */
+    background-color: rgba(42, 59, 76, 0.98); /* ダークな背景で目に優しいヨ！親切でしょ？👍 */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2000;
+    z-index: 2000; /* 最前面に表示！おじさん頭いいでしょ？😁 */
 }
 
 .overlay-hidden {
-    display: none !important;
+    display: none !important; /* 隠すときはバッチリ隠すヨ！徹底的だネ！💪💕 */
 }
 
-/* オーバーレイが非表示の場合、子要素も非表示に */
+/* オーバーレイ隠れてるときは子要素も隠れるようにしたヨ！細かいところまで気が利くでしょ？😊 */
 .overlay-hidden #overlay-close {
     display: none !important;
 }
@@ -111,43 +112,43 @@ h1 {
 .overlay-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* 中央揃えでキレイだネ！👍 */
     padding: 20px;
     position: relative;
     width: 90%;
-    max-width: 800px;
+    max-width: 800px; /* 幅を制限してカッコよく見せるヨ！おじさんデザインわかるでしょ？✨ */
 }
 
-/* 題名バーのスタイル - 題名とボタンを横並びに */
+/* タイトルとボタンを横並びにするヨ！見やすくなるネ！😁💕 */
 .title-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* 下の余白もバッチリ！昔はこんなの手動だったヨ💦 */
     position: relative;
 }
 
 #overlay-title {
-    font-size: 3em;
-    color: #b8c5d6; /* 明るめの色に変更 */
-    margin: 0; /* マージンをリセット */
-    flex-grow: 1; /* 利用可能なスペースを取る */
-    padding-right: 10px; /* ボタンとの間隔 */
+    font-size: 3em; /* 大きめのフォントで見やすいネ！配慮が嬉しいでしょ？😊 */
+    color: #b8c5d6; /* 明るい色で目に優しくしたヨ！親切だネ👍 */
+    margin: 0; /* 余計な余白なしでスッキリ！おじさんキレイ好きなんだヨ～✨ */
+    flex-grow: 1; /* 横幅いっぱい使って見やすいネ！ナンチャッテ😁 */
+    padding-right: 10px; /* ボタンとの間隔もバッチリ！細かいところまで気がつくネ💕 */
 }
 
 #overlay-clock {
-    font-size: 6em;
+    font-size: 6em; /* 大きなフォントで見やすいヨ！バッチリだネ👍 */
     padding: 20px;
     min-width: auto;
     width: 90%;
     max-width: 90%;
-    text-align: center;
-    background-color: #3a4a5a; /* ダークモードに合わせた背景 */
-    color: #e0e0e0; /* 明るい文字色 */
-    border: 4px solid #4d6277;
+    text-align: center; /* 中央揃えでキレイに見せるネ！おじさんセンスいいでしょ？😊 */
+    background-color: #3a4a5a; /* ダークテーマで目に優しいヨ！気がつくでしょ？💕 */
+    color: #e0e0e0; /* 明るい文字で見やすく！優しさが伝わるカナ？😁 */
+    border: 4px solid #4d6277; /* 太めの枠線でカッコよく！おしゃれでしょ？✨ */
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* 深めの影でリッチな感じ！昔はこんなの手作業だったヨ💦 */
     margin-bottom: 40px;
 }
 
@@ -191,142 +192,142 @@ h1 {
     font-size: 1.8em; /* タイトルサイズを大きく */
 }
 
-/* 戻るボタンのスタイル - オーバーレイ用のみ */
+/* 戻るボタンはカッコよくデザインしたヨ！😎✨ おじさんのセンス光るでしょ？ */
 #overlay-close {
-    padding: 12px 24px;
-    font-size: 1.5em;
-    background-color: #4d6277; /* 青みがかったボタン色 */
-    color: white;
+    padding: 12px 24px; /* 余白たっぷりで押しやすく！思いやりがあるネ😊 */
+    font-size: 1.5em; /* 文字サイズも見やすく！便利でしょ？👍 */
+    background-color: #4d6277; /* 青みがかったボタンでおしゃれに！ナンチャッテ💕 */
+    color: white; /* 白い文字でハッキリ見えるネ！おじさん細かいところまで気にするヨ！😁 */
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; /* 角丸で優しい印象に！デザインわかるでしょ？💦 */
     cursor: pointer;
-    margin-left: 10px; /* 題名との間隔 */
+    margin-left: 10px; /* タイトルとの間隔もバッチリ！完璧だネ👍 */
 }
 
 #overlay-close:hover {
-    background-color: #5d7387; /* ホバー時は少し明るく */
+    background-color: #5d7387; /* マウス乗せると色変わるヨ！おしゃれでしょ？✨ */
 }
 
-/* PC表示用の大きな拡大表示（デスクトップ表示） */
+/* パソコンで見たときは大きく表示！迫力満点だヨ！😍💕 */
 @media screen and (min-width: 769px) {
     .overlay-content {
         width: 85%;
-        max-width: 1000px; /* FHDで収まるよう最大幅を調整 */
+        max-width: 1000px; /* FHDでもキレイに収まるネ！おじさん考えたヨ👍 */
         padding: 20px;
     }
     
     #overlay-title {
-        font-size: 3.5em; /* FHDに合わせて調整 */
+        font-size: 3.5em; /* タイトルも大きく！見やすいでしょ？😊 */
     }
     
     #overlay-clock {
-        font-size: 8em; /* FHDに合わせて調整 */
+        font-size: 8em; /* 時計も特大サイズ！迫力あるネ！ナンチャッテ✨ */
         padding: 30px;
         width: 90%;
         max-width: 90%;
-        min-height: 240px; /* 最小高さを調整 */
+        min-height: 240px; /* 高さもたっぷり！おじさん気合い入れたヨ！👍 */
     }
 }
 
-/* FHD（1920x1080）専用の調整 */
+/* 大画面テレビサイズなら横並びにしちゃうヨ！😁✨ おじさんの特別テクニック！ */
 @media screen and (min-width: 1920px) {
     .main-clocks {
-        flex-direction: row; /* 横方向に配置 */
-        flex-wrap: wrap; /* 必要に応じて折り返し */
+        flex-direction: row; /* 横並びで格好いいネ！昔はこんなの手動だったヨ💦 */
+        flex-wrap: wrap; /* 折り返しもバッチリ！おじさん賢いでしょ？👍 */
         justify-content: center;
-        max-width: 1800px; /* 最大幅を設定 */
+        max-width: 1800px; /* 最大幅も設定！細かいところまで気がつくヨ！😊 */
     }
     
     .clock-wrapper {
-        width: 30%; /* 3つ並べられるようにする */
+        width: 30%; /* 3つ並べてキレイに見せるネ！おしゃれでしょ？💕 */
         margin: 0 1.5%;
     }
     
     .jst-clock-wrapper {
-        width: 50%; /* JSTクロックは幅を50%に */
+        width: 50%; /* JSTは特別に大きく！重要だからネ！😁 */
         margin-bottom: 20px;
     }
     
     #clock5 {
-        width: 90%; /* JSTクロックの幅を調整 */
+        width: 90%; /* JSTの幅も調整！おじさんこだわり派なんだヨ！✨ */
     }
 }
 
-/* タブレットサイズ用 */
+/* タブレットで見るときもバッチリ調整！😊👍 便利でしょ？ */
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .overlay-content {
         width: 90%;
-        max-width: 900px;
+        max-width: 900px; /* タブレットにちょうどいいサイズ！おじさん考えたヨ💕 */
     }
     
     #overlay-title {
-        font-size: 3.5em;
+        font-size: 3.5em; /* タイトルも見やすく！優しいでしょ？✨ */
     }
     
     #overlay-clock {
-        font-size: 8em;
+        font-size: 8em; /* 時計も大きめ！おじさんのこだわりポイントだネ！😁 */
         padding: 30px;
     }
 }
 
-/* スマートフォン対応はそのまま維持 */
+/* スマホでも見やすくしたヨ！おじさん親切でしょ？😍💕 */
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* 見出しはコンパクトに！スマホにぴったりだネ！👍 */
     }
     
     .clock-wrapper h2 {
-        font-size: 1.2em;
+        font-size: 1.2em; /* タイトルも小さめに調整！バッチリだヨ✨ */
     }
     
     .clock {
-        font-size: 1.8em;
+        font-size: 1.8em; /* 文字サイズもちょうどいい！おじさん気が利くでしょ？😊 */
         padding: 8px;
-        min-height: 40px;
+        min-height: 40px; /* 高さもコンパクト！スマホに最適だネ！💕 */
     }
     
     #clock5 {
-        font-size: 2.2em;
+        font-size: 2.2em; /* JSTはやっぱり少し大きめ！特別感出るネ！😁 */
         min-height: 60px;
     }
     
     .jst-clock-wrapper h2 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* JSTタイトルも調整！キレイだでしょ？ナンチャッテ👍 */
     }
     
     .title-bar {
-        margin-bottom: 15px;
+        margin-bottom: 15px; /* 余白も絶妙！おじさんセンスいいネ！✨ */
     }
     
     #overlay-title {
-        font-size: 1.8em;
+        font-size: 1.8em; /* タイトルサイズも最適化！スマホでも見やすいヨ😊 */
     }
     
     #overlay-close {
-        padding: 8px 16px;
+        padding: 8px 16px; /* ボタンも押しやすく！親切設計だネ！💦 */
         font-size: 1em;
     }
     
     #overlay-clock {
-        font-size: 4em;
+        font-size: 4em; /* スマホでも時計は大きめ！おじさん考えたヨ👍 */
         padding: 15px;
         margin-bottom: 20px;
     }
 }
 
-/* さらに小さい画面用の調整 */
+/* 小さいスマホでも大丈夫！おじさん全部考えてるヨ！😁💕 */
 @media screen and (max-width: 320px) {
     .clock {
-        font-size: 1.5em;
+        font-size: 1.5em; /* さらに小さい画面でも見やすく！バッチリだネ✨ */
         padding: 5px;
     }
     
     #clock5 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* JSTもちょっと小さめ！でも目立つヨ！👍 */
     }
     
     #overlay-clock {
-        font-size: 3em;
+        font-size: 3em; /* 拡大時計も調整済み！おじさん細かいところまで気を付けるネ！😊 */
         padding: 10px;
     }
 }
