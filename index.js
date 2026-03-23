@@ -5,11 +5,15 @@ function updateClock(clockId, timeOffset = 0) {
 
     // 今の時間にオフセットを足しちゃうネ〜😊
     const now = new Date(Date.now() + timeOffset);
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeStr = now.toLocaleTimeString('ja-JP', {
+        timeZone: 'Asia/Tokyo',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
 
-    clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+    clockElement.textContent = timeStr;
 }
 
 // 拡大表示のオーバーレイを設定するヨ！💕 キレイに見えるようにね〜
@@ -72,25 +76,25 @@ function setupOverlay() {
 // オーバーレイの時計を更新、大きくて見やすいネ！😊✨
 function updateOverlayClock(offset) {
     const now = new Date(Date.now() + offset);
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    
-    document.getElementById('overlay-clock').textContent = `${hours}:${minutes}:${seconds}`;
+    const timeStr = now.toLocaleTimeString('ja-JP', {
+        timeZone: 'Asia/Tokyo',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+
+    document.getElementById('overlay-clock').textContent = timeStr;
 }
 
 function startClocks() {
-    // 日本標準時のオフセットを計算するヨ！おじさん頭いいでしょ？😁💦
-    const localOffsetMinutes = new Date().getTimezoneOffset();
-    const jstOffsetFromLocal = (540 + localOffsetMinutes) * 60 * 1000;
-    
     // 各時計の設定、バッチリ決めていくヨ〜！👍✨
     const clocks = [
         { id: 'clock1', offset: 0.5 * 1000 },  // 3411 特別教室、ちょっとズレてるんだヨ〜
         { id: 'clock2', offset: -2 * 1000 },   // 4105 自学自習室、昔の時計みたいに遅れてるネ😅
         { id: 'clock3', offset: 0 * 1000 },    // 2401 2DHR、コレが基準だヨ！バッチリ！
         { id: 'clock4', offset: 57 * 1000 },   // 電気電子工学実験室、早すぎるカモ💦
-        { id: 'clock5', offset: jstOffsetFromLocal }, // 日本標準時、おじさん大好き正確な時間だネ！😊
+        { id: 'clock5', offset: 0 * 1000 },    // 日本標準時、おじさん大好き正確な時間だネ！😊
         { id: 'clock6', offset: 0 * 1000 },    // 工事中、もうすぐ完成だヨ〜✨
         { id: 'clock7', offset: 0 * 1000 }    // 工事中、楽しみにしててネ！ナンチャッテ👍
     ];
