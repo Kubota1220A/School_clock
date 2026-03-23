@@ -86,13 +86,13 @@ function startClocks() {
     
     // 各時計の設定、バッチリ決めていくヨ〜！👍✨
     const clocks = [
-        { id: 'clock1', offset: 0.5 * 1000 },  // 3411 特別教室、ちょっとズレてるんだヨ〜
-        { id: 'clock2', offset: -2 * 1000 },   // 4105 自学自習室、昔の時計みたいに遅れてるネ😅
-        { id: 'clock3', offset: 0 * 1000 },    // 2401 2DHR、コレが基準だヨ！バッチリ！
-        { id: 'clock4', offset: 57 * 1000 },   // 電気電子工学実験室、早すぎるカモ💦
+        { id: 'clock1', offset: jstOffsetFromLocal + 0.5 * 1000 },  // 3411 特別教室、ちょっとズレてるんだヨ〜
+        { id: 'clock2', offset: jstOffsetFromLocal + (-2 * 1000) },  // 4105 自学自習室、昔の時計みたいに遅れてるネ😅
+        { id: 'clock3', offset: jstOffsetFromLocal },                  // 2401 2DHR、コレが基準だヨ！バッチリ！
+        { id: 'clock4', offset: jstOffsetFromLocal + 57 * 1000 },    // 電気電子工学実験室、早すぎるカモ💦
         { id: 'clock5', offset: jstOffsetFromLocal }, // 日本標準時、おじさん大好き正確な時間だネ！😊
-        { id: 'clock6', offset: 0 * 1000 },    // 工事中、もうすぐ完成だヨ〜✨
-        { id: 'clock7', offset: 0 * 1000 }    // 工事中、楽しみにしててネ！ナンチャッテ👍
+        { id: 'clock6', offset: jstOffsetFromLocal },                  // 工事中、もうすぐ完成だヨ〜✨
+        { id: 'clock7', offset: jstOffsetFromLocal }                   // 工事中、楽しみにしててネ！ナンチャッテ👍
     ];
     
     // 各時計を初期化するヨ、おじさんの自慢の技！😁
