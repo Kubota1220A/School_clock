@@ -1,3 +1,5 @@
+[Github pages](https://kubota1220a.github.io/School_clock/)
+
 <!-- おじさんが作った素敵な時計アプリだヨ！😊✨ ナンチャッテ -->
 
 # 移動教室時計 - おじさんの自信作だヨ！！👍😁
